@@ -22,8 +22,6 @@ if __name__ == '__main__':
 	else:
 		raise "No config for env: " + env
 
-	run_notice_scenarios(deployment_info)
-
 	ssh_con_str = env_config['ssh_con_str']
 
 	print "NOTICE: this script has to be run as a user with access to SSH keys."
