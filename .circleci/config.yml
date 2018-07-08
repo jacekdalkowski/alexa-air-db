@@ -75,19 +75,23 @@ workflows:
   build-and-deploy:
     jobs:
       - build
-      - hold:
+      - hold_before_dev:
          type: approval
          requires:
            - build
       - deploy_dev:
           requires:
-            - hold
+            - hold_before_dev
           filters:
             branches:
               only: master
+      - hold_before_prod:
+         type: approval
+         requires:
+           - deploy_dev
       - deploy_prod:
           requires:
-            - hold
+            - hold_before_prod
           filters:
             branches:
               only: master
