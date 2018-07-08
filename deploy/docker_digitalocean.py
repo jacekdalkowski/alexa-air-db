@@ -6,6 +6,7 @@ import sh
 import time
 from docker_digitalocean_db import *
 from docker_digitalocean_config import config
+import sys
 
 
 if __name__ == '__main__':
