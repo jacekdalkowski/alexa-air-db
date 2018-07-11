@@ -40,3 +40,13 @@ db.users.remove( { } )
 db.users.remove( {fbId : "100000204641942" } )
 db.users.remove( {"_id" : ObjectId("59c81e6e2733c03f7d0afb72")})
 ```
+## Remote env:
+
+#### Run client
+```
+docker exec -it  alexa-air-dev-web-db mongo
+show dbs
+use airpolution
+show collections
+db.airpolution.find()
+```
